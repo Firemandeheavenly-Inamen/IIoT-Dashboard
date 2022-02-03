@@ -5,17 +5,26 @@
   min-height: 100vh;
   padding: 40px;
   display: flex;
+  min-width: 450px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   position: relative;
-  margin-left: 310px;
+  margin-left: 150px;
   top: 80px;
   border-radius: 0px;
-  left: -60px;
 }
 
+.reports{
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+}
+
+#testconnection{
+margin-bottom: 20px;
+}
 .ant-select-selector{
   padding: 0 !important;
 }
@@ -40,7 +49,7 @@
 }
 .testconnection .ant-card-body {
   width: 100%;
-  max-width: 850px;
+  max-width: 800px;
   margin-bottom: 20px;
   background-color: white;
   border-radius: 30px;
@@ -88,22 +97,55 @@ li.ant-list-item {
   color: brown;
   font-family: sans-serif;
 }
+@media(max-width:1150px){
+  .testconnection{
+    width: 800px;
+  left: 80px; 
+ }
+}
+
+@media(max-width:1000px){
+  .testconnection{
+    width: 700px;
+  left: 80px; 
+ }
+}
+
+@media(max-width:900px){
+  .testconnection{
+    width: 600px;
+  left: 50px; 
+ }
+}
 
 @media(max-width: 800px) {
   .testconnection {
-    top: 350px;
-    width:450px;
+    top: 250px;
+    width: 450px;
+    left: -140px;
+    width: 100%;
+  }
+  .ant-card{
+    width: 400px;
+  }
+  .reports{
+    width: 500px;
+    margin-left: 95px;
+      }
+}
+@media(max-width: 600px) {
+  .testconnection {
+    top: 250px;
     margin: 0 auto;
-    left: 5px;
+    left: -10px;
     width: 100%;
   }
 }
-
-@media(max-width: 550px) {
-  .testconnection{
-     left:-5px;
-    width: 500px;
+@media(max-width: 400px) {
+  .testconnection {
+    top: 250px;
     margin: 0 auto;
-    top:240px;
+    left: -10px;
+    width: 100%;
   }
-  }
+}

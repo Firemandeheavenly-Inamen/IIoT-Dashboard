@@ -42,7 +42,6 @@ export const TestConnection = () => {
   const onFinish = (values) => {
     const { name, host, clientId, port } = values;
     if (name === "" || host === "" || clientId === "" || port === "") {
-      // console.log('Good catch')
       alert("All required fields must be filled");
     } else {
       const url = `ws://${host}:${port}/mqtt`;
@@ -62,7 +61,6 @@ export const TestConnection = () => {
         rejectUnauthorized: false,
       };
       mqttConnect(url, options);
-      console.log(values);
     }
   };
 
@@ -199,7 +197,7 @@ export const TestConnection = () => {
 
   return (
     <div className="testconnection">
-      <Card
+      <Card id='testconnection'
         title="Test Connection"
         actions={[
           <Button type="primary" htmlType="submit" onClick={handleConnect}>
